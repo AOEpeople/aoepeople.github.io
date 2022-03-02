@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode | default " en" }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+  {{ $style := resources.Get "dist/main.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+</head>
+
+<body class="bg-gray-50">
+  <div class="shadow-2xl shadow-gray-200 bg-white absolute inset-x-0">
+    <div class="container mx-auto p-4">
+      <a href="/">
+        <img src="https://cdn4.aoe.com/typo3conf/ext/aoeweb_base/Resources/Public/Images/Logos/aoe_blue.svg"
+          class="h-12 float-left pr-4" />
+        <div class="text-3xl">
+          ❤️ Open Source
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="container mx-auto bg-white pt-24 min-h-screen px-20">
+    {{ block "main" . }}{{ end }}
+  </div>
+
+  <div class="container my-20 mx-auto">
+    <img src="https://cdn4.aoe.com/typo3conf/ext/aoeweb_base/Resources/Public/Images/Logos/aoe_blue.svg"
+      class="h-10 float-left pr-4" />
+    <div class="text-gray-500 text-sm">
+      AOE is a leading global provider of services for digital transformation and digital business models. AOE relies
+      exclusively on established Enterprise Open Source technologies. This leads to innovative solutions, digital
+      products
+      and portals in agile software projects, and helps build long-lasting, strategic partnerships with our customers.
+    </div>
+    <div class="clear-both pt-8">
+      <a href="https://www.aoe.com/en/imprint.html" class="underline text-gray-500">Legal Information</a>
+    </div>
+    <div class="clear-both pt-8">
+      Follow us:
+      <a href="https://www.linkedin.com/company/aoe" class="underline text-gray-500">Linkedin</a>
+      <a href="https://twitter.com/aoepeople" class="underline text-gray-500">Twitter</a>
+      <a href="https://github.com/aoepeople" class="underline text-gray-500">Github</a>
+    </div>
+  </div>
+</body>
+
+</html>

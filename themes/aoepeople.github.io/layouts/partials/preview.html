@@ -1,0 +1,16 @@
+<div class="clear-both py-4">
+    <img src="{{ .Params.image }}" class="float-left mr-8 mt-3" height="150"
+        width="250" />
+    <div class="flex flex-col">
+        <div class="text-2xl text-blue-900 py-1"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+        <div>
+            <hr />
+            <div class="italic text-gray-600 text-sm">
+                {{ .Date.Format "2006-01-02" }}, by {{ .Params.author }}
+            </div>
+            <div class="italic text-gray-600 text-lg py-2">
+                {{ .Summary }}
+            </div>
+        </div>
+    </div>
+</div>
