@@ -10,20 +10,4 @@
     h2 {
         @apply text-3xl font-bold pt-4 text-blue-900;
     }
-
-    .front-matter {
-        @apply pb-16
-    }
-
-    .front-matter p, .front-matter div {
-        @apply p-2 block text-lg container px-0 xl:px-40
-    }
-
-    .front-matter pre {
-        @apply py-2 px-4 overflow-scroll
-    }
-
-    .front-matter img {
-        @apply p-8
-    }
 }
