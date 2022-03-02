@@ -1,0 +1,6 @@
+.hugo_build.lock
+public/
+node_modules/
+.DS_Store
+.idea
+.vscode

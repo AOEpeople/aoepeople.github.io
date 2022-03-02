@@ -1,0 +1,9 @@
+{{ define "main" }}
+<div class="pt-8">
+  <h2 class="mt-8 py-4 text-center border-b">Read the AOE Articles</h2>
+
+  {{ range (.GetPage "/posts").Pages }}
+  {{ partial "preview" . }}
+  {{ end }}
+</div>
+{{ end }}

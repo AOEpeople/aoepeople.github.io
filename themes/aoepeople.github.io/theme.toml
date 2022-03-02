@@ -1,0 +1,9 @@
+name = "AOE People Github Theme"
+license = "MIT"
+licenselink = "https://github.com/AOEpeople/aoepeople.github.io/blob/master/LICENSE"
+description = "AOEpeople Github Theme"
+min_version = "0.0.1"
+
+[author]
+  name = "Bastian Ike"
+  homepage = "https://www.aoe.com/"

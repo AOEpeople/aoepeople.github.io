@@ -1,0 +1,14 @@
+{
+  "name": "aoepeople.github.io",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"no tests\" && exit 1"
+  },
+  "author": "AOEPeople",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.0.22"
+  }
+}

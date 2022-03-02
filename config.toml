@@ -1,0 +1,4 @@
+baseURL = 'http://aoepeople.github.io/'
+languageCode = 'en-us'
+title = 'AOE OpenSource'
+theme = 'aoepeople.github.io'
