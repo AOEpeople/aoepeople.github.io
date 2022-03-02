@@ -1,6 +1,8 @@
-# aoepeople.github.io
+# [opensource.aoe.com](https://opensource.aoe.com)
 
-Welcome to our AOE opensource landing page.
+Welcome to our AOE Open Source landing page.
+
+We AOEpeople love Open Source. In this repository we share our Open Source landing page.
 
 ## Local Development Setup
 
