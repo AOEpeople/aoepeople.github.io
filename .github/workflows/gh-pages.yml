@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main  # Set a branch to deploy
+  schedule:
+    - cron:  '30 0 * * *'
   pull_request:
 
 jobs:
