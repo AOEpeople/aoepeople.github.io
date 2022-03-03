@@ -35,7 +35,7 @@ jobs:
         working-directory: ./themes/aoepeople.github.io
 
       - name: Build Tailwind
-        run: npx tailwindcss -i ./css/main.css -o ./assets/dist/main.css
+        run: npm run css:build
         working-directory: ./themes/aoepeople.github.io
 
       # run again to include updated theme stylesheets after tailwind
