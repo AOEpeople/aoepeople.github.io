@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "npx tailwindcss -i ./css/main.css -o ./assets/dist/main.css --watch",
-    "test": "echo \"no tests\" && exit 1"
+    "css:watch": "tailwindcss -i ./css/main.css -o ./assets/dist/main.css --watch",
+    "css:build": "tailwindcss -i ./css/main.css -o ./assets/dist/main.css"
   },
   "author": "AOEPeople",
   "license": "MIT",
