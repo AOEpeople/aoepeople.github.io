@@ -7,9 +7,11 @@ on:
   schedule:
     - cron:  '30 0 * * *'
   pull_request:
+    branches:
+      - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
@@ -45,12 +47,57 @@ jobs:
           hugo-version: 'latest'
 
       - name: Build
+        if: github.ref == 'refs/heads/main'
         run: hugo --minify
 
+      - name: Build Preview
+        if: github.event_name == 'pull_request'
+        run: hugo --minify -b https://opensource.aoe.com/_preview-opensource/${{ github.head_ref }} -e preview
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: public
+          path: public
+
+  deploy:
+    runs-on: ubuntu-20.04
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    environment:
+      name: opensource.aoe.com
+      url: https://opensource.aoe.com/
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: public
+          path: public
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           cname: opensource.aoe.com
+
+  deploy-preview:
+    runs-on: ubuntu-20.04
+    if: github.event_name == 'pull_request'
+    needs: build
+    environment: 
+      name: _preview-opensource/${{ github.head_ref }}
+      url: https://opensource.aoe.com/_preview-opensource/${{ github.head_ref }}
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: public
+          path: public
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.PREVIEW_DEPLOY_KEY }}
+          external_repository: aoepeople/_preview-opensource
+          publish_branch: gh-pages
+          publish_dir: ./public
+          destination_dir: ${{ github.head_ref }}
