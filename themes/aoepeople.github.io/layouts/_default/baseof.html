@@ -3,9 +3,14 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
   {{ $style := resources.Get "dist/main.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="apple-touch-icon" sizes="180x180" href="//cdn3.aoe.com/typo3conf/ext/aoeweb_base/Resources/Public/Images/Favicons/aoe/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="//cdn1.aoe.com/typo3conf/ext/aoeweb_base/Resources/Public/Images/Favicons/aoe/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="//cdn2.aoe.com/typo3conf/ext/aoeweb_base/Resources/Public/Images/Favicons/aoe/favicon-16x16.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet" as="style">
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
 
@@ -22,27 +27,47 @@
     </div>
   </div>
 
-  <div class="container mx-auto bg-white pt-24 min-h-screen px-20">
+  <div class="container mx-auto bg-white pt-8 md:pt-12 min-h-screen px-8 md:px-20">
     {{ block "main" . }}{{ end }}
   </div>
 
-  <div class="container my-20 mx-auto">
-    <img src="https://cdn4.aoe.com/typo3conf/ext/aoeweb_base/Resources/Public/Images/Logos/aoe_blue.svg"
-      class="h-10 float-left pr-4" />
-    <div class="text-gray-500 text-sm">
-      AOE is a leading global provider of services for digital transformation and digital business models. AOE relies
-      exclusively on established Enterprise Open Source technologies. This leads to innovative solutions, digital
-      products
-      and portals in agile software projects, and helps build long-lasting, strategic partnerships with our customers.
+  <div class="container my-20 mx-auto px-8 md:px-20">
+    <div class="flex flex-row mx-auto prose lg:prose-xl md:prose-lg">
+      <img src="https://cdn4.aoe.com/typo3conf/ext/aoeweb_base/Resources/Public/Images/Logos/aoe_blue.svg"
+        class="basis-1/6 h-10" />
+      <!--max-w-4xl -->
+      <div class="basis-5/6 text-gray-500 text-sm pl-4">
+        AOE is a leading global provider of services for digital transformation and digital business models. AOE relies
+        exclusively on established Enterprise Open Source technologies. This leads to innovative solutions, digital
+        products
+        and portals in agile software projects, and helps build long-lasting, strategic partnerships with our customers.
+      </div>
     </div>
-    <div class="clear-both pt-8">
-      <a href="https://www.aoe.com/en/imprint.html" class="underline text-gray-500">Legal Information</a>
+    <div class="clear-both pt-8 text-3xl text-blue-900 text-center">
+      <a href="https://www.facebook.com/aoepeople" target="_blank" class="mx-2 md:mx-8" aria-label="Facebook" rel="noreferrer">
+        <span class="fab fa-facebook-f"></span>
+      </a>
+      <a href="https://twitter.com/aoepeople" target="_blank" class="mx-2 md:mx-8" aria-label="Twitter" rel="noreferrer">
+        <span class="fab fa-twitter"></span>
+      </a>
+      <a href="https://www.linkedin.com/company/aoe" target="_blank" class="mx-2 md:mx-8" aria-label="Linkedin" rel="noreferrer">
+        <span class="fab fa-linkedin-in"></span>
+      </a>
+      <a href="https://www.xing.com/company/aoe" target="_blank" class="mx-2 md:mx-8" aria-label="Xing" rel="noreferrer">
+        <span class="fab fa-xing"></span>
+      </a>
+      <a href="https://www.instagram.com/aoepeople" target="_blank" class="mx-2 md:mx-8" aria-label="Instagram" rel="noreferrer">
+        <span class="fab fa-instagram"></span>
+      </a>
+      <a href="https://www.youtube.com/user/aoepeople" target="_blank" class="mx-2 md:mx-8" aria-label="Youtube" rel="noreferrer">
+        <span class="fab fa-youtube"></span>
+      </a>
+      <a href="https://github.com/AOEpeople/" target="_blank" class="mx-2 md:mx-8" aria-label="Github" rel="noreferrer">
+        <span class="fab fa-github"></span>
+      </a>
     </div>
-    <div class="clear-both pt-8">
-      Follow us:
-      <a href="https://www.linkedin.com/company/aoe" class="underline text-gray-500">Linkedin</a>
-      <a href="https://twitter.com/aoepeople" class="underline text-gray-500">Twitter</a>
-      <a href="https://github.com/aoepeople" class="underline text-gray-500">Github</a>
+    <div class="clear-both pt-8 mb-12 text-center text-sm">
+      <a href="https://www.aoe.com/en/imprint.html" class="text-blue-900">Legal Information</a>
     </div>
   </div>
 </body>
