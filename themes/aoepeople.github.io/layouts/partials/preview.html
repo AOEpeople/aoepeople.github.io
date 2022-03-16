@@ -1,9 +1,10 @@
-<div class="clear-both py-4">
-    <img src="{{ .Params.image }}" class="float-left mr-8 mt-3" height="150"
-        width="250" />
-    <div class="flex flex-col">
-        <div class="text-2xl text-blue-900 py-1"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
-        <div>
+<div class="mx-auto overflow-hidden pt-8">
+    <div class="md:flex">
+        <div class="md:shrink-0">
+            <img src="{{ .Params.image }}" class="h-48 w-full object-contain object-top md:h-full md:w-48 lg:w-96" />
+        </div>
+        <div class="md:pl-8">
+            <div class="text-2xl text-blue-900 py-1"><a href="{{ .RelPermalink }}">{{ .Title }}</a></div>
             <hr />
             <div class="italic text-gray-600 text-sm">
                 {{ .Date.Format "2006-01-02" }}, by {{ .Params.author }}
