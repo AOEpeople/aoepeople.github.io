@@ -82,7 +82,7 @@ jobs:
 
   deploy-preview:
     runs-on: ubuntu-20.04
-    if: github.event_name == 'pull_request' && github.repository_owner == 'AOEpeople'
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
     needs: build
     environment: 
       name: _preview-opensource/${{ github.head_ref }}
