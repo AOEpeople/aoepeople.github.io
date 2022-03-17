@@ -1,0 +1,10 @@
+<a class="rounded-card p-4 flex flex-col shadow-card transition ease-in-out delay-75 hover:-translate-y-1 duration-200"
+   href="{{ .html_url }}">
+    <div class="py-2 uppercase text-aoe-gray-dark text-sm font-bold">{{ .language }}</div>
+    <div class="text-xl pb-2"><span class="text-aoe-gray-medium">AOEpeople/</span><wbr><span class="font-bold text-aoe-dark-blue">{{
+              .name }}</span></div>
+    <div class="text-aoe-gray-dark text-lg flex-grow pt-2">{{ .description }}</div>
+    <div class="flex pt-2 text-sm">
+        {{ partial "counters" . }}
+    </div>
+</a>

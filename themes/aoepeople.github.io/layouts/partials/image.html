@@ -1,5 +1,5 @@
 {{ if strings.HasSuffix .Params.image "svg" }}
-    <img src="{{ .Params.image }}" class="h-48 w-full object-contain object-top md:h-full md:w-48 lg:w-96" alt="{{ .Title }}" />
+    <img src="{{ .Params.image }}" class="h-48 w-full object-contain object-top md:h-full md:w-48 lg:w-96 pb-2" alt="{{ .Title }}" />
 {{ else }}
     {{ $image := .Page.Resources.GetMatch .Params.image }}
     {{ if $image }}
@@ -9,7 +9,7 @@
                 <source srcset="{{ ($image.Resize "x200 webp").RelPermalink }}" media="(min-width: 640px)" />
             {{ end }}
             <source srcset="{{ ($image.Resize "x200 q90 smart").RelPermalink }}" media="(min-width: 640px)">
-            <img src="{{ ($image.Fill "575x575 q90 smart").RelPermalink }}" alt="{{ .Title }}" class="h-48 w-full object-cover object-right md:h-full md:w-48 lg:w-96" />
+            <img src="{{ ($image.Fill "575x575 q90 smart").RelPermalink }}" alt="{{ .Title }}" class="h-48 w-full object-cover object-right md:h-full md:w-48 lg:w-96 pb-2" />
         </picture>
     {{ end }}
 {{ end }}

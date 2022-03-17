@@ -8,6 +8,61 @@
     }
 
     h2 {
-        @apply text-3xl font-bold pt-4 text-blue-900;
+        @apply text-4xl font-bold text-aoe-dark-blue text-center mb-4;
     }
+
+    h3 {
+        @apply text-2xl font-bold text-aoe-dark-blue text-2xl mb-1;
+    }
+
+    .prose h4 {
+        @apply text-2xl font-bold text-aoe-dark-blue text-2xl mb-4 mt-8;
+    }
+
+    p {
+        @apply text-lg font-light text-aoe-gray-dark;
+    }
+
+    .container {
+        @apply relative mx-auto py-12 px-8 lg:px-20
+    }
+
+    .button-primary {
+        @apply bg-aoe-orange shadow-button-primary rounded-full text-white px-8 text-sm py-2 inline-block font-medium
+    }
+
+    .button-secondary {
+        @apply bg-aoe-dark-blue shadow-button-secondary rounded-full text-white px-8 text-sm py-2 inline-block font-medium
+    }
+
+    .meta {
+        @apply text-aoe-gray-dark font-light mb-1
+    }
+
+    .prose blockquote {
+        @apply border-0 p-0
+    }
+
+    .prose blockquote p {
+        @apply text-aoe-dark-blue pl-8
+    }
+}
+
+/* Content blocks */
+.bg-gradient-gray-light::before {
+    background: linear-gradient(180deg,rgba(226,230,233,.51),rgba(226,230,233,0) 94.46%);
+    width: 100%;
+    height: 160px;
+    position: absolute;
+    box-sizing: border-box;
+    content: '';
+}
+
+.prose blockquote::before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f10d';
+    position: absolute;
+    color: #e1e8ee;
+    padding-right: 3em;
 }
