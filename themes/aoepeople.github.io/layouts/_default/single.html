@@ -1,16 +1,17 @@
 {{ define "main" }}
-<div class="pt-8">
-  <div>
-    <h2 class="mt-4 md:mt-8 py-4 text-center border-b">{{ .Title }}</h2>
+<div class="bg-gradient-gray-light">
+  <div class="container text-center">
+    <h2>{{ .Title }}</h2>
+    <div class="meta uppercase font-medium text-aoe-gray-medium">{{ .Date.Format "2006-01-02" }}, by </div>
+    <div class="meta font-bold aoe-gray-dark">{{ .Params.author }}</div>
   </div>
-  <div>
-    <div class="italic text-gray-600 text-sm">
-      {{ .Date.Format "2006-01-02" }}, by {{ .Params.author }}
-    </div>
-  </div>
+</div>
 
-  <div class="my-8 pb-8 mx-auto prose lg:prose-xl md:prose-lg">
-    {{ .Content }}
+<div class="bg-gradient-gray-light">
+  <div class="container">
+    <div class="mx-auto prose lg:prose-xl md:prose-lg text-aoe-gray-dark text-lg">
+      {{ .Content }}
+    </div>
   </div>
 </div>
 {{ end }}
