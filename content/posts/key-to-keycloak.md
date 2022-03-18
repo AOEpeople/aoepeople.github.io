@@ -4,6 +4,8 @@ date: 2021-12-12
 draft: false
 author: Theresa Henze
 image: /images/keycloak_logo_200px.svg
+tags: ["Keycloak", "identity management", "auth", "spi"]
+description: "Extend Keycloak SPI to implement custom identity management behaviour"
 ---
 
 Keycloak is our go-to tool when it comes to identity management, federating identities over multiple sources and organizing and managing roles for all kinds of applications.

@@ -5,6 +5,7 @@ date: 2022-03-12
 draft: false
 author: Florian Brandel
 image: /images/web3-teaser.jpg
+tags: ["Web3", "blockchain"]
 summary: As software developers we update our systems continuously. With Web3 becoming more and more popular we have to ask ourselves what this new "version" means to us and what we can expect from it.
 ---
 
@@ -28,5 +29,5 @@ So does this mean we should migrate all our customers applications to some block
 
 #### Conclusion
 
-The Web3 is not just a new version you simply upgrade to. It is a new paradigm where people and machines can interact with data or property without the need of a third party in the middle. The discussions about Web3 and blockchain in general will remain controversial until we see more reasonable use cases. In the meantime we should keep our mind open for the things to come.
+The Web3 is not just a new version you simply upgrade to. It is a new paradigm where people and machines can interact with data or property without the need of a third party in the middle. The discussions about Web3 and blockchain in general will remain controversial until we see more reasonable use cases. In the meantime we should keep our minds open for the things to come.
 
