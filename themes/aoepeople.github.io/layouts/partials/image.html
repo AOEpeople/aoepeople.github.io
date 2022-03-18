@@ -1,0 +1,14 @@
+{{/*
+    SVGs will be displayed in a normal IMG tag.
+    Other image file formats are expected like so:
+    * `myImage.png` and `myImage.png.webp`
+    * `myImage.jpg` and `myImage.jpg.webp`
+*/}}
+{{ if strings.HasSuffix . "svg" }}
+<img src="{{ . }}" class="h-48 w-full object-contain object-top md:h-full md:w-48 lg:w-96" />
+{{ else }}
+<picture>
+    <source srcset="{{ . }}.webp" />
+    <img src="{{ . }}" class="h-48 w-full object-contain object-top md:h-full md:w-48 lg:w-96" />
+</picture>
+{{ end }}
