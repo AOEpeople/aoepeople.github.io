@@ -4,7 +4,7 @@ slug: "should-you-upgrade-to-web3"
 date: 2022-03-12
 draft: false
 author: Florian Brandel
-image: /images/web3-teaser.jpg
+image: images/web3-teaser.jpg
 tags: ["Web3", "blockchain"]
 summary: As software developers we update our systems continuously. With Web3 becoming more and more popular we have to ask ourselves what this new "version" means to us and what we can expect from it.
 ---

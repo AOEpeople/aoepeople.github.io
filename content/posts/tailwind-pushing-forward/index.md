@@ -3,7 +3,7 @@ title: "Tailwind pushing us forward"
 date: 2022-01-13
 draft: false
 author: Achim Rolle
-image: /images/Frontendler_1600px.jpg
+image: images/Frontendler_1600px.jpg
 tags: ["Tailwind", "CSS", "frontend", "react", "remix"]
 description: "Easy and accessible CSS with Tailwind"
 ---
@@ -16,7 +16,7 @@ With a focus on web development at AOE we have been on the bleeding edge ever si
 
 These days, Tailwind CSS is really pushing us forward, by making things easy and accessible for everyone.
 
-![Frontend Development at AOE](/images/Frontendler_1600px.jpg)
+{{< picture src="images/Frontendler_1600px.jpg" alt="Frontend Development at AOE" >}}
 
 How does Tailwind CSS differ from classic CSS frameworks, or just plain reset.css and custom classes? Tailwind shines with to aspects:
 

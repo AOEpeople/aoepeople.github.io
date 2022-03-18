@@ -1,0 +1,15 @@
+{{ if strings.HasSuffix .Params.image "svg" }}
+    <img src="{{ .Params.image }}" class="h-48 w-full object-contain object-top md:h-full md:w-48 lg:w-96" alt="{{ .Title }}" />
+{{ else }}
+    {{ $image := .Page.Resources.GetMatch .Params.image }}
+    {{ if $image }}
+        <picture>
+            {{ if hugo.IsExtended }}
+                <source srcset="{{ ($image.Resize "575x webp").RelPermalink }}" />
+                <source srcset="{{ ($image.Resize "x200 webp").RelPermalink }}" media="(min-width: 640px)" />
+            {{ end }}
+            <source srcset="{{ ($image.Resize "x200 q90 smart").RelPermalink }}" media="(min-width: 640px)">
+            <img src="{{ ($image.Fill "575x575 q90 smart").RelPermalink }}" alt="{{ .Title }}" class="h-48 w-full object-cover object-right md:h-full md:w-48 lg:w-96" />
+        </picture>
+    {{ end }}
+{{ end }}

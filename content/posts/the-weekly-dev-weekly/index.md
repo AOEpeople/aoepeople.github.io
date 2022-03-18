@@ -3,7 +3,7 @@ title: "The weekly Dev-Weekly"
 date: 2021-12-13
 draft: false
 author: Thorsten Essig
-image: /images/20170914-IMGP8581.jpg
+image: images/20170914-IMGP8581.jpg
 tags: ["Dev-Weekly", "sharing knowledge"]
 description: "We use the Dev-Weekly to share knowledge and experience at AOE"
 ---
@@ -20,7 +20,7 @@ This is where we introduced the Dev-Weekly, just following our weekly, we quickl
 
 By today the Dev-Weekly sparks new ideas every week, and topics ranging from CSS frameworks to monorepo tooling to analysing iOS exploits make sure everyone finds something they are interested in.
 
-![Dev Weekly](/images/20170914-IMGP8581.jpg)
+{{< picture src="images/20170914-IMGP8581.jpg" alt="Dev Weekly" >}}
 
 How does a recipe for a successful Dev-Weekly look like?
 
