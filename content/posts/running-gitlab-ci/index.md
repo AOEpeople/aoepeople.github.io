@@ -3,7 +3,7 @@ title: "Running (faster) with Gitlab CI"
 date: 2021-11-10
 draft: false
 author: Tolleiv Nietsch
-image: /images/gitlab-ci-1.png
+image: images/gitlab-ci-1.png
 tags: ["Gitlab CI", "pipeline", "build processes", "continuous integration", "delivery"]
 description: "Fast feedback on test, build and deploy with Gitlab CI pipelines"
 ---
@@ -13,16 +13,16 @@ Naturally, all of our build processes, continuous integration and delivery as we
 
 So how do we organize our pipelines at AOE?
 
-![Gitlab CI Repo](/images/gitlab-ci-1.png)
+{{< picture src="images/gitlab-ci-1.png" alt="Gitlab CI Repo" >}}
 
 Initially, we have a repo which provides templates and starting points for all of our pipelines, so we can benefit from scaling to any number of microservices without having to think of management overhead.
 
-![Gitlab CI Jobs](/images/gitlab-ci-3.png)
+{{< picture src="images/gitlab-ci-3.png" alt="Gitlab CI Jobs" >}}
 
 Each pipeline is a well-defined and small piece that declares it basic steps, such as "test", "build" and "deploy".
 More complex pipelines are organized as sub-pipelines, e.g. deployments to multiple regions:
 
-![Gitlab CI Pipeline](/images/gitlab-ci-2.png)
+{{< picture src="images/gitlab-ci-2.png" alt="Gitlab CI Pipeline" >}}
 
 Using these abstractions we can quickly roll out our applications to new clusters or changed infrastructure topology, while keeping fast build processes so our developers get a quick feedback on merge requests and commits.
 

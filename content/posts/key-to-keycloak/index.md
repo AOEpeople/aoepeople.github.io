@@ -3,7 +3,7 @@ title: "The Key to Keycloak"
 date: 2021-12-12
 draft: false
 author: Theresa Henze
-image: /images/keycloak_logo_200px.svg
+image: images/keycloak_logo_200px.svg
 tags: ["Keycloak", "identity management", "auth", "spi"]
 description: "Extend Keycloak SPI to implement custom identity management behaviour"
 ---
@@ -17,7 +17,7 @@ Being a complex project, Keycloak can be intimidating at first glance, but once 
 
 Let us take a look into what Keycloak does is when a user is authenticated, and see how we can implement such a provider:
 
-![Keycloak Auth](/images/keycloak-auth.png)
+{{< picture src="images/keycloak-auth.png" alt="Keycloak Auth" >}}
 
 We can see multiple points marked with "SPI" (service provider interface). These are all the points where we can provide additional or alternative implementations, and alter the way Keycloak works.
 Please note, some API's are private, which means they can change in any way during Keycloak updates. So one has to be careful where and when functionality is added.
@@ -25,7 +25,7 @@ Please note, some API's are private, which means they can change in any way duri
 In our example we want to implement a new token mapper, to have some claims mapped in a specific way.
 To do this, we setup a small Java project in our favorite Editor, throw in some gradle build scripts (maven works too, of course!) and define our entry point and a marker for Keycloak to load our provider:
 
-![Keycloak Code](/images/keycloak-code.png)
+{{< picture src="images/keycloak-code.png" alt="Keycloak Code" >}}
 
 ```java
 package mapper;
@@ -143,6 +143,6 @@ public class AttributeMapper
 
 Now we can add the mapper to a client and evaluate it using the Keycloak admin console.
 
-![Keycloak Mapper](/images/keycloak-mapper.png)
+{{< picture src="images/keycloak-mapper.png" alt="Keycloak Mapper" >}}
 
 You can find the official Keycloak documentation here: [https://www.keycloak.org/docs/latest/server_development/#_providers](https://www.keycloak.org/docs/latest/server_development/#_providers)

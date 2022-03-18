@@ -1,0 +1,13 @@
+{{ $src := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
+{{ $alt := (.Get "alt") }}
+
+{{ if strings.HasSuffix (.Get "src") "svg" }}
+    <img src="{{ $src }}" />
+{{ else }}
+    <picture>
+        {{ if hugo.IsExtended }}
+            <source srcset="{{ ($src.Resize "730x webp").RelPermalink }}" />
+        {{ end }}
+        <img src="{{ ($src.Resize "730x q90").RelPermalink }}" alt="{{ $alt }}" />
+    </picture>
+{{ end }}

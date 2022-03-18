@@ -3,7 +3,7 @@ title: "Loving Open Source"
 date: 2022-02-10
 draft: false
 author: Daniel Pötzinger
-image: /images/stage-home-20190212-DSC08164-colorful.jpg
+image: images/stage-home-20190212-DSC08164-colorful.jpg
 tags: ["contribute", "maintain", "community", "share", "conference"]
 description: "That's why AOE loves open source"
 ---
@@ -13,7 +13,7 @@ We grow by learning on new impulses, not by locking ourselves into our comfort z
 
 <!--more-->
 
-![Working as a Team](/images/stage-home-20190212-DSC08164-colorful.jpg)
+{{< picture src="images/stage-home-20190212-DSC08164-colorful.jpg" alt="Working as a Team" >}}
 
 That's why we believe in Open Source as a chance to steadily keep learning from each other, beyond our companies boundaries.
 
