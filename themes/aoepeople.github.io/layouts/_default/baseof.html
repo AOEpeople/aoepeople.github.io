@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ block "description" . }}{{ with .Params.summary }}{{ . }} | {{ end }}{{ with .Params.description }}{{ . }} | {{ end }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="keywords" content="{{ block "tags" . }}{{ with .Site.Params.tags }}{{ delimit . ", "}}, {{ end }}{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}{{ end }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ .Permalink }}" />
   {{ $style := resources.Get "dist/main.css" | resources.Minify | resources.Fingerprint }}
   <link rel="apple-touch-icon" sizes="180x180" href="//cdn3.aoe.com/typo3conf/ext/aoeweb_base/Resources/Public/Images/Favicons/aoe/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="//cdn1.aoe.com/typo3conf/ext/aoeweb_base/Resources/Public/Images/Favicons/aoe/favicon-32x32.png">

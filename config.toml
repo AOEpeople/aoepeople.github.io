@@ -2,3 +2,6 @@ baseURL = 'https://opensource.aoe.com/'
 languageCode = 'en-us'
 title = 'AOE OpenSource'
 theme = 'aoepeople.github.io'
+[Params]
+  description = 'We present our AOE open source projects'
+  tags = [ 'aoe', 'aoe wiesbaden', 'aoe it', 'open source', 'digital projects' ]
