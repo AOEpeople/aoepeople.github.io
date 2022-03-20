@@ -14,9 +14,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="//cdn3.aoe.com/typo3conf/ext/aoeweb_base/Resources/Public/Images/Favicons/aoe/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="//cdn1.aoe.com/typo3conf/ext/aoeweb_base/Resources/Public/Images/Favicons/aoe/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="//cdn2.aoe.com/typo3conf/ext/aoeweb_base/Resources/Public/Images/Favicons/aoe/favicon-16x16.png">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/brands.min.css" rel="stylesheet" as="style">
   <link rel="stylesheet" href="{{ $style.Permalink }}">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" as="style">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/brands.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/brands.min.css" rel="stylesheet" as="style"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" as="style"></noscript>
 </head>
 
 <body class="text-aoe-gray-dark bg-white text-lg">
