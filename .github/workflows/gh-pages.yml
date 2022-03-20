@@ -23,6 +23,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
+          extended: true
 
       - name: Build
         run: hugo --minify
@@ -45,6 +46,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
+          extended: true
 
       - name: Build
         if: github.ref == 'refs/heads/main'
