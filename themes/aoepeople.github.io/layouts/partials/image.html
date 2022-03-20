@@ -1,5 +1,8 @@
 {{ if strings.HasSuffix .Params.image "svg" }}
-    <img src="{{ .Params.image }}" class="h-48 w-full object-contain object-top md:h-full md:w-48 lg:w-96 pb-2" alt="{{ .Title }}" />
+    {{ $image := .Page.Resources.GetMatch .Params.image }}
+    {{ if $image }}
+        <img src="{{ $image.Permalink }}" class="h-48 w-full object-contain object-top md:h-full md:w-48 lg:w-96 pb-2" alt="{{ .Title }}" />
+    {{ end }}
 {{ else }}
     {{ $image := .Page.Resources.GetMatch .Params.image }}
     {{ if $image }}
