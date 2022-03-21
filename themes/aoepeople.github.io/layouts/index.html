@@ -5,13 +5,16 @@
       <h2>Explore the AOE Projects</h2>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 py-4 gap-8">
-        {{ with getJSON "https://api.github.com/orgs/aoepeople/repos?type=public&sort=pushed&per_page=6" }}
-          {{ range . }}
+        {{ $excludeRepos := .Site.Params.excludeRepos }}
+        {{ $excludeReposAoeLength := add (len $excludeRepos) 6 }}
+        {{ with getJSON "https://api.github.com/orgs/aoepeople/repos?type=public&sort=pushed&per_page={$$excludeReposAoeLength}" }}
+          {{ range first 6 (where . "name" "not in" $excludeRepos) }}
             {{ partial "repo-card" . }}
           {{ end }}
         {{ end }}
-        {{ with getJSON "https://api.github.com/orgs/i-love-flamingo/repos?type=public&sort=pushed&per_page=3" }}
-          {{ range . }}
+        {{ $excludeReposFlamingoLength := add (len $excludeRepos) 3 }}
+        {{ with getJSON "https://api.github.com/orgs/i-love-flamingo/repos?type=public&sort=pushed&per_page={$excludeReposFlamingoLength}" }}
+          {{ range first 3 (where . "name" "not in" $excludeRepos) }}
             {{ partial "repo-card" . }}
           {{ end }}
         {{ end }}
