@@ -5,3 +5,4 @@ theme = 'aoepeople.github.io'
 [Params]
   description = 'We present our AOE open source projects'
   tags = [ 'aoe', 'aoe wiesbaden', 'aoe it', 'open source', 'digital projects' ]
+  excludeRepos = [ '_preview-opensource' ]
