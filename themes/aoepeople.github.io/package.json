@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "css:watch": "tailwindcss -i ./css/main.css -o ./assets/dist/main.css --watch",
-    "css:build": "tailwindcss -i ./css/main.css -o ./assets/dist/main.css"
+    "build": "rm -rf assets/dist && mkdir -p assets/dist && cp -r css images assets/dist/ && npm run css:build",
+    "css:watch": "tailwindcss -i ./css/main.css -o ./assets/dist/css/main.css --watch",
+    "css:build": "tailwindcss -i ./css/main.css -o ./assets/dist/css/main.css"
   },
   "author": "AOEPeople",
   "license": "MIT",
