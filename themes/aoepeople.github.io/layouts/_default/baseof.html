@@ -10,15 +10,18 @@
   <meta name="keywords" content="{{ block "tags" . }}{{ with .Site.Params.tags }}{{ delimit . ", "}}, {{ end }}{{ with .Params.tags }}{{ delimit . ", "}}{{ end }}{{ end }}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="{{ .Permalink }}" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-  <link rel="preload" href="/css/brands.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="/css/brands.min.css" rel="stylesheet" as="style"></noscript>
-  <link rel="preload" href="/css/roboto-fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="/css/roboto-fonts.css" rel="stylesheet" as="style"></noscript>
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ (resources.Get "dist/images/apple-touch-icon.png" | resources.Fingerprint).Permalink }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ (resources.Get "dist/images/favicon-32x32.png" | resources.Fingerprint).Permalink }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ (resources.Get "dist/images/favicon-16x16.png" | resources.Fingerprint).Permalink }}">
 
-  {{ $style := resources.Get "dist/main.css" | resources.Minify | resources.Fingerprint }}
+  {{ $brands := resources.Get "dist/css/brands.min.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="preload" href="{{ $brands.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="{{ $brands.Permalink }}" rel="stylesheet" as="style"></noscript>
+  {{ $roboto := resources.Get "dist/css/roboto-fonts.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="preload" href="{{ $roboto.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="{{ $roboto.Permalink }}" rel="stylesheet" as="style"></noscript>
+
+  {{ $style := resources.Get "dist/css/main.css" | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
   {{ range .AlternativeOutputFormats -}}
@@ -30,7 +33,7 @@
   <div class="shadow-header inset-x-0 h-24">
     <div class="container mx-auto py-8 px-1 sm:px-8">
       <a href="/">
-        <img src="/images/aoe_blue.svg"
+        <img src="{{ (resources.Get "dist/images/aoe_blue.svg" | resources.Fingerprint).Permalink }}"
           class="h-12 float-left pr-4" width="136" height="48" alt="AOE" />
         <div class="text-3xl">
           ❤️ Open Source
@@ -46,7 +49,7 @@
   <div class="bg-aoe-gray">
     <div class="container">
       <div class="flex flex-row mx-auto prose lg:prose-xl md:prose-lg">
-        <img src="/images/aoe_blue.svg"
+        <img src="{{ (resources.Get "dist/images/aoe_blue.svg" | resources.Fingerprint).Permalink }}"
           class="basis-1/6 h-10" width="122" height="40" alt="AOE" />
         <div class="basis-5/6 text-aoe-gray-dark text-sm pl-4">
           AOE is a leading global provider of services for digital transformation and digital business models. AOE relies
