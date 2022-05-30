@@ -1,8 +1,8 @@
 {{ $src := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) }}
 {{ $alt := (.Get "alt") }}
 
-{{ if strings.HasSuffix (.Get "src") "svg" }}
-    <img src="{{ $src }}" />
+{{ if or (strings.HasSuffix (.Get "src") "svg") (strings.HasSuffix (.Get "src") "gif") }}
+    <img src="{{ $src }}" alt="{{ $alt }}" />
 {{ else }}
     <picture>
         {{ if hugo.IsExtended }}
