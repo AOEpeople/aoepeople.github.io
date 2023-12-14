@@ -71,7 +71,7 @@ jobs:
       url: https://opensource.aoe.com/
     steps:
       - name: Download Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: public
           path: public
@@ -91,7 +91,7 @@ jobs:
       url: https://opensource.aoe.com/_preview-opensource/${{ github.head_ref }}
     steps:
       - name: Download Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: public
           path: public
