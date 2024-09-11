@@ -10,4 +10,7 @@ Naturally, all of our build processes, continuous integration and delivery as we
  &lt;source srcset="https://opensource.aoe.com/posts/running-gitlab-ci/images/gitlab-ci-1_hu12396438957244856298.webp" />
  
  &lt;img src="https://opensource.aoe.com/posts/running-gitlab-ci/images/gitlab-ci-1_hu8677614840330491278.png" alt="Gitlab CI Repo" />
- &lt;/pi</description></item></channel></rss>
+ &lt;/picture>
+
+
+&lt;p>Initially, we have a repo which provides templates and starting points for all of our pipelines, so we can benefit from scaling to any number of microservices without having to think of management overhead.&lt;/p></description></item></channel></rss>
